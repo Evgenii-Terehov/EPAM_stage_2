@@ -1,0 +1,15 @@
+
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(´¢°È
+l
+java:S1192"VDefine a constant instead of duplicating this literal "Group has no students" 4 times.(õóÙ“
+l
+java:S1192"VDefine a constant instead of duplicating this literal "Faculty has no groups" 3 times.(¥¾Úä
+r
+java:S1192"\Define a constant instead of duplicating this literal "University has no faculties" 4 times.(ñÊ÷µ
+Q
+java:S3518y";Make sure "point" can't be zero before doing this division.(ûšØÍ
+Q
+java:S3518F";Make sure "point" can't be zero before doing this division.(ûšØÍ
+Q
+java:S3518b";Make sure "point" can't be zero before doing this division.(ûšØÍ
