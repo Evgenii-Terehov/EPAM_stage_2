@@ -1,0 +1,4 @@
+|   file.txt; 
+|---New folder;
+|   New Презентация Microsoft PowerPoint - Copy.pptx;
+|   New Презентация Microsoft PowerPoint.pptx;

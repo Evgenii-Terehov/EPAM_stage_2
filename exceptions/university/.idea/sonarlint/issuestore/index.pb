@@ -15,3 +15,5 @@ S
 #src/main/java/impl/IUniversity.java,8\0\8017eda214f58da2a1b6a2e0c7a7accf9fb9c858
 R
 "src/main/java/ReadyUniversity.java,9\8\98758ce21f391eead5dc7332709c15a33aff6157
+d
+4src/main/java/exception/NoFacultiesInUniversity.java,2\6\268c94ac45700c403031aea42d1c98fa399492bb
