@@ -1,13 +1,11 @@
-import java.io.*;
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import java.util.List;
 import java.util.Scanner;
-
-//C:\\D\\Books\\empty_package\\file.txt
-//C:\\D\\Books
 
 public class TreeOfFiles {
 
