@@ -6,6 +6,9 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
+//C:\\D\\Books\\empty_package\\file.txt
+//C:\\D\\Books
+
 public class TreeOfFiles {
 
     static int points = 0;
