@@ -15,13 +15,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class SortedRandomNumbers {
-    static String pathToFile = "data\\sorted-random-numbers-data\\output.txt";
-    static int sizeOfArray = 10;
+    private static final String PATH_TO_FILE = "data\\sorted-random-numbers-data\\output.txt";
+    private static final int SIZE_OF_ARRAY = 10;
 
     public static void main(String[] args) {
-        File file = new File(pathToFile);
+        File file = new File(PATH_TO_FILE);
         createFileOfNumbers(Arrays.toString(new Random()
-                .ints(sizeOfArray, 0, 100).toArray()));
+                .ints(SIZE_OF_ARRAY, 0, 100).toArray()));
 
         int[] array = scanFile(file);
         Arrays.sort(array);
@@ -30,7 +30,7 @@ public class SortedRandomNumbers {
     }
 
     public static void createFileOfNumbers(String arrayOfNumbers) {
-        try (FileWriter fileWriter = new FileWriter(pathToFile)) {
+        try (FileWriter fileWriter = new FileWriter(PATH_TO_FILE)) {
 
             fileWriter.write(arrayOfNumbers
                     .replaceAll("[\\[\\],]", "")
@@ -42,9 +42,9 @@ public class SortedRandomNumbers {
     }
 
     public static int[] scanFile(File fileToScan) {
-        int[] array = new int[sizeOfArray];
+        int[] array = new int[SIZE_OF_ARRAY];
         try (Scanner scanner = new Scanner(fileToScan)) {
-            for (int i = 0; i < sizeOfArray; i++) {
+            for (int i = 0; i < SIZE_OF_ARRAY; i++) {
                 array[i] = scanner.nextInt();
             }
         } catch (IOException e) {

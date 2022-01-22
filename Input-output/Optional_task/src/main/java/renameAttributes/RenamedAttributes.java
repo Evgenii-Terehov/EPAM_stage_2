@@ -13,11 +13,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class RenamedAttributes {
-    private final static String pathToOutputFile = "data\\renamed-attributes-data\\output.txt";
-    static String pathToExperimentFile = "src\\main\\java\\ExperimentFile.java";//PATH_TO_FILE
+    private static final String PATH_TO_OUTPUT_FILE = "data\\renamed-attributes-data\\output.txt";
+    private static final String PATH_TO_EXPERIMENT_FILE = "src\\main\\java\\ExperimentFile.java";
 
-    static File fileToExperiment = new File(pathToExperimentFile);//static?
-    static File fileToOutput = new File(pathToOutputFile);//static?
+    static File fileToExperiment = new File(PATH_TO_EXPERIMENT_FILE);
+    static File fileToOutput = new File(PATH_TO_OUTPUT_FILE);
 
     public static void main(String[] args) {
         scanExperimentFile();

@@ -11,14 +11,14 @@ public class TreeOfFiles {
 
     static int points = 0;
     static String indentForDirectory = "|---";
-    static String oneMoreIndentForDirectory = "--";
+    static final String ONE_MORE_INDENT_FOR_DIRECTORY = "--";
     static String indentForFile = "|   ";
-    static String oneMoreIndentForFile = "  ";
+    static final String ONE_MORE_INDENT_FOR_FILE = "  ";
 
     static String forDirectory;
     static String forFile;
     static File pathToFile;
-    static String pathToOutputFile = "data/outputFile.txt";
+    private static final String PATH_TO_OUTPUT_FILE = "data/outputFile.txt";
 
     public static void main(String[] args) {
         System.out.println("Please, enter the path: ");
@@ -27,12 +27,12 @@ public class TreeOfFiles {
         pathToFile = new File(enteredPath);
 
         if (pathToFile.isDirectory()) {
-            File outputFile = new File(pathToOutputFile);
+            File outputFile = new File(PATH_TO_OUTPUT_FILE);
             outputFile.delete();
             parsingDirectory(pathToFile);
 
         } else {
-            File outputFile = new File(pathToOutputFile);
+            File outputFile = new File(PATH_TO_OUTPUT_FILE);
             outputFile.delete();
             parsingDirectory(pathToFile.getParentFile());
             writeInformationAboutDirectory();
@@ -49,8 +49,8 @@ public class TreeOfFiles {
             if (someInMassive.isDirectory()) {
 
                 points++;
-                indentForDirectory = indentForDirectory.concat(oneMoreIndentForDirectory);
-                indentForFile = indentForFile.concat(oneMoreIndentForFile);
+                indentForDirectory = indentForDirectory.concat(ONE_MORE_INDENT_FOR_DIRECTORY);
+                indentForFile = indentForFile.concat(ONE_MORE_INDENT_FOR_FILE);
 
                 forDirectory = String.format("%-1s; %n", indentForDirectory + someInMassive.getName());
                 stringBuilder.append(forDirectory);
@@ -73,7 +73,7 @@ public class TreeOfFiles {
 
     public static void writeInformationAboutDirectory() {
         try {
-            List<String> inputList = Files.readAllLines(Paths.get(pathToOutputFile));
+            List<String> inputList = Files.readAllLines(Paths.get(PATH_TO_OUTPUT_FILE));
             double numberOfDirectories = inputList.stream()
                     .filter(directory -> directory.contains("|---")).count();
             double numberOfFiles = inputList.stream()
@@ -92,7 +92,7 @@ public class TreeOfFiles {
     }
 
     public static void writeIntoTheFile(String string) {
-        try (FileWriter fileWriter = new FileWriter(pathToOutputFile, true)) {
+        try (FileWriter fileWriter = new FileWriter(PATH_TO_OUTPUT_FILE, true)) {
             fileWriter.write(String.valueOf(string));
         } catch (IOException e) {
             e.printStackTrace();

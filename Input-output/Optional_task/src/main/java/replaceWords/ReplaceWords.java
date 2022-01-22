@@ -15,12 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReplaceWords {
-
-    static String pathToOutputFile = "data\\replace-words-data\\output.txt";
-    static String pathToInputFile = "data\\replace-words-data\\output.txt";
+    private static final String PATH_TO_OUTPUT_FILE = "data\\replace-words-data\\output.txt";
+    private static final String PATH_TO_INPUT_FILE = "data\\replace-words-data\\output.txt";
 
     public static void main(String[] args) {
-        File file = new File(pathToInputFile);
+        File file = new File(PATH_TO_INPUT_FILE);
 
         replaceWordsInLines(scanStringLines(file));
     }
@@ -47,7 +46,7 @@ public class ReplaceWords {
     }
 
     public static void writeIntoTheFile(String words) {
-        try (FileWriter fileWriter = new FileWriter(pathToOutputFile, true)) {
+        try (FileWriter fileWriter = new FileWriter(PATH_TO_OUTPUT_FILE, true)) {
             fileWriter.write(String.valueOf(words));
             fileWriter.write("\n");
         } catch (IOException e) {
